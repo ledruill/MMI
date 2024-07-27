@@ -13,14 +13,24 @@ class Chien{
 		$this->poids = $p;
 	}
 	
-	public function rouler($km)
+	public function anniversaire()
 	{
-		$this->kilometrage = $this->kilometrage + $km;
+		$this->age = $this->age + 1;
 	}
 	
-	public function afficherVehicule()
+	public function grossir($kg) 
 	{
-		return " Vehicule de marque : ".$this->marque." d'une puissance de ".$this->puissance." CV avec ".$this->kilometrage." kms.";
+		$this->poids = $this->poids + $kg;
+	}
+	
+	public function  maigrir($kg)
+	{
+		$this->poids = $this->poids - $kg;
+	}
+	
+	public function afficherChien()
+	{
+		return " Mon nom est ".$this->nom.", ma race est ".$this->race.", j'ai ".$this->age." ans et je pese ".$this->poids." kgs.";
 	}
 	
 }
