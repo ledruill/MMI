@@ -1,25 +1,32 @@
 <?php
-class Vehicule{
-	public $marque;
-	public $puissance;
-	public $kilometrage;
-	
-	public function __construct($m, $p, $k)
-	{
-		$this->marque = $m;
-		$this->puissance = $p;
-		$this->kilometrage = $k;
-	}
-	
-	public function rouler($km)
-	{
-		$this->kilometrage = $this->kilometrage + $km;
-	}
-	
-	public function afficherVehicule()
-	{
-		return " Vehicule de marque : ".$this->marque." d'une puissance de ".$this->puissance." CV avec ".$this->kilometrage." kms.";
-	}
-	
-}
+    //----------------------------------------------------
+    // fichier : personne.php
+    // ---------------------------------------------------
+    // Notion d'encapsulation : protection des propriétés
+    // de l'objet.   
+    //----------------------------------------------------
+
+    class Personne {
+        // Définition des attributs de la classe
+        private $prenom;
+        private $nom;
+        private $age;
+
+        // Définition de la fonction constructeur 
+        public function __construct($n,$p,$a) { 
+            $this->nom=$n;
+            $this->prenom=$p;
+            $this->age=$a;
+        }  
+
+        // Définition du comportement sePresente() 
+        public function sePresente() {  
+            return 'Je m\'appelle '.$this->prenom.' '.$this->nom.' et j\'ai '.$this->age.' ans '; 
+        }
+		
+		// initialisation du nom
+        public function setNom($n) {  
+            $this->nom = $n; 
+        }
+    }
 ?>
